@@ -1,0 +1,42 @@
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: lavender;
+  color: darkgreen;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    border: 5px ridge darkgreen;
+    border-radius: .5rem;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+  text-align: center;
+  border-radius: 0.5em;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+  text-align: center;
+  border-radius: 0.5em;
+}
+
+input:hover {
+  box-shadow: 1px 1px 8px darkgreen, -1px -1px 8px darkgreen;
+}
