@@ -7,11 +7,15 @@ let totalDays = document.getElementById("totalDays");
 let totalHours = 0;
 
 //takes user input values of totalMiles, milesPerHour, totalElevationGain, and hoursPerDay to return value of totalDays rounded to 2 decimal places
-function getTotalDays() {
+function getTotalDays() { 
   totalHours = totalMiles.value / milesPerHour.value;
   totalDays.value = totalHours / hoursPerDay.value;
   totalDays.value = Math.round(totalDays.value * 100) / 100;
   return totalDays.value;
+}
+
+function addElevationGain() {
+  totalHours = ((totalElevationGain.value / 1000) * .5 );
 }
 
 //takes user input values for milesPerHour, hoursPerDay, and totalDays to return value of totalMiles rounded to 2 decimal places
@@ -22,7 +26,8 @@ function getTotalMiles() {
   return totalMiles.value;
 }
 
-totalMiles.addEventListener("keyup", getTotalDays);
+totalMiles.addEventListener("keyup", getTotalDays, addElevationGain);
 milesPerHour.addEventListener("keyup", getTotalDays, getTotalMiles);
 hoursPerDay.addEventListener("keyup", getTotalDays, getTotalMiles);
-totalDays.addEventListener("keyup", getTotalMiles);
+totalElevationGain.addEventListener("keyup", getTotalDays, getTotalMiles);
+totalDays.addEventListener("keyup", getTotalMiles, addElevationGain);

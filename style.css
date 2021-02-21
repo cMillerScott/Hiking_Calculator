@@ -5,20 +5,19 @@ body {
   color: darkgreen;
   align-items: center;
   text-align: center;
-  justify-content: center;
 }
 
 article {
-    display: flex;
-    flex-direction: column;
-    border: 5px ridge darkgreen;
-    border-radius: .5rem;
+  display: flex;
+  flex-direction: column;
+  border: 5px ridge darkgreen;
+  border-radius: 0.5em;
 }
 
 div {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: .75em;
 }
 
 /* Chrome, Safari, Edge, Opera */
@@ -26,17 +25,33 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-  text-align: center;
-  border-radius: 0.5em;
 }
 
 /* Firefox */
 input[type="number"] {
   -moz-appearance: textfield;
+}
+
+input {
+  background-color: lavenderblush;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 2px solid darkgreen;
   text-align: center;
-  border-radius: 0.5em;
+  border-radius: 0.25em;
 }
 
 input:hover {
-  box-shadow: 1px 1px 8px darkgreen, -1px -1px 8px darkgreen;
+  box-shadow: 0.5px 0.5px 4px 2px darkgreen, -0.5px -0.5px 4px 2px darkgreen;
+}
+
+input:focus {
+  border: none;
+  box-shadow: 1px 1px 7px 2px darkgreen;
+}
+
+label{
+  font-weight: bolder;
+  padding: .5em;
 }
