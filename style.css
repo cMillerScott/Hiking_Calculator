@@ -34,9 +34,7 @@ input[type="number"] {
 
 input {
   background-color: lavenderblush;
-  border-top: none;
-  border-right: none;
-  border-left: none;
+  border: none;
   border-bottom: 2px solid darkgreen;
   text-align: center;
   border-radius: 0.25em;
